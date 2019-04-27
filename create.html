@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link rel="stylesheet" href="webjars/bootstrap/4.3.1/css/bootstrap.min.css" 
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="webjars/jquery/jquery.min.js"></script>
+<script src="webjars/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+body {
+  background-color: #C0C0C0;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+</style>
+
+</head>
+<body>
+<div class="col-sm-3 col-md-12 col-lg-12">
+<img src="innovation-creativity-diagram.jpg" class="img-responsive img-rounded" style="
+    border-top-width: 286px;
+    margin-top: 60px;
+    margin-right: 8px;
+    border-bottom-width: 62px;
+    margin-bottom: 0px;
+    margin-left: 8px;
+    " Align="right"> </div>
+<form id="saveData" method="POST">
+<div class="form-group col-lg-3">
+  <label style="margin-top: 10px;" for="name">Select UserName:</label>
+  <select class="form-control" name="username">
+    <option value="select">Select</option> <option value="Abhishek">Abhishek</option>
+  <option value="ShivJay">ShivJay</option> <option value="Prashant">Prashant</option>
+  </select>
+
+  <label for="teamName">Select Team Name:</label>
+  <select class="form-control" name="teamName">
+    <option value="select">Select</option> <option value="Big">Big</option>
+  <option value="Small">Small</option> <option value="Medium">Medium</option>
+  </select>
+
+<label for="teamUpdates">Your Updates:</label>
+<textarea class="form-control" name="teamUpdates" rows="5" cols="60" placeholder="Please Enter the Details Here."></textarea> </br></br>
+</div>
+<input class="btn btn-primary" name="save" type="submit" value="Save" formaction="saveData" data-toggle="modal" data-target="#myModal" style="margin-left: 16px;"/>
+<input class="btn btn-primary" id="login" type="submit" value="Home" />
+</form>
+<script>
+$("#login").click(function() {
+	 alert("Click here to return to the home page!!!");
+	 window.open("login.html",target="_blank");
+	 });
+</script>
+
+<!-- Modal -->
+  	<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+<!-- Modal content-->
+	      <div class="modal-content">
+	        <!-- <div class="modal-header">
+	          <button type="button" class="close" data-dismiss="modal">&times;</button>
+	          <h4 class="modal-title">Modal Header</h4>
+	        </div> -->
+	        <div class="modal-body">
+	          <p>Your details added successfully!!!</p>
+	        </div>
+	        <div class="modal-footer">
+	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      	</div>
+	      	</div>
+</body>
+</html>

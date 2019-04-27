@@ -1,24 +1,36 @@
 package model;
-
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="Status")
 public class SaveData {
 	@Id
-	private String name;
+	@GeneratedValue(strategy = GenerationType.IDENTITY) 
+	@Column(name = "id",unique=true, nullable = false)
+	private int id;
+	private String username;
 	private String teamName;
 	private String teamUpdates;
 	private Date createdDateTime;
-	
-	
-	public String getName() {
-		return name;
+		
+	public int getId() {
+		return id;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	public String getTeamName() {
 		return teamName;
@@ -39,6 +51,4 @@ public class SaveData {
 	public void setCreatedDateTime(Date date) {
 		this.createdDateTime = date;
 	}
-	
-	
 }

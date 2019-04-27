@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
+import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -72,6 +73,7 @@ public class ApplicationController {
 		saveobj.setCreatedDateTime(new Date());
 		userRepository.save(saveobj);		
 		return "Saved Successfully!";	
+		
 	}
 	
 	@RequestMapping(path="/deleteData", method=RequestMethod.POST)
